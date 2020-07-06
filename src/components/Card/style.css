@@ -1,0 +1,36 @@
+.card {
+    flex: 1;
+  }
+  
+  .card_deck {
+    justify-content: center;
+  }
+  
+  .card img {
+    max-width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .card p{
+    color: #0050e4;
+    font-weight: bold;
+  }
+  
+  .card .price{
+    font-weight: 200;
+  }
+  
+  .card button{
+    padding: 5px 50px;
+    margin: 35px;
+    background-color:  #dfbe2b;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .card button:hover {
+    background-color: #4751e6;
+  }

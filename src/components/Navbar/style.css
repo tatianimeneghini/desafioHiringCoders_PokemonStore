@@ -1,0 +1,40 @@
+.navBar{
+    display: flex;
+    background-color: white;
+    align-content: center;
+  }
+
+  .logo{
+    max-width: 250px;
+    max-height: 300px;
+    padding: 12px 8px 8px;
+    cursor: pointer;
+  }
+  
+  .searchBar{
+    display: flex;
+    width: 35%;
+    height: 30px;
+    margin-top: 20px;
+    background-color: white;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .profileIcon{
+    margin-top: 15px;
+    margin-left: 15px ;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .searchBar input{
+    background-color: white;
+    border: none;
+    width: 85%;
+    height: 100%;
+    margin: 0;
+    border-radius: 9px;
+    text-align: center;
+    cursor: text;
+  }

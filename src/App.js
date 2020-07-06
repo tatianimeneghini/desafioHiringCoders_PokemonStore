@@ -1,25 +1,71 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import ReactNotification from 'react-notifications-component';
+import NavBar from './components/Navbar';
+import Card from './components/Card';
+import Cart from './components/Cart';
+import Container from './components/Container';
+import Modal from './components/Modal';
+
+
+import 'react-notifications-component/dist/theme.css';
+import './style.css';
+import './responsive.css';
 
 function App() {
+  const [isClsEnabled, setIsClsEnabled] = useState(false);
+  const [isCartEnabled, setIsCardEnabled] = useState(true);
+  const [cartItems, setCartItems] = useState([]);
+  const [priceTotal, setPriceTotal] = useState(0);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [showModalState, setShowModalState] = useState(false);
+
+  function endShop(clsOptionEnable){
+    setIsClsEnabled(clsOptionEnable)
+    setCartItems([]);
+    setPriceTotal(0);
+
+    setShowModalState(true);
+    setTimeout(() => {
+      setShowModalState(false)
+    }, 2500);
+  }
+
+  function renderCart(cartItems, priceTotal) {
+    if (isCartEnabled)
+      return (<Cart cartItems={cartItems} totalPrice={priceTotal} endShop={endShop} />);
+  }
+
+
+  function addPokemonToCart(currentPokemon) {
+    setCartItems([...cartItems, currentPokemon]);
+    setPriceTotal(priceTotal + parseFloat(((currentPokemon.weight + currentPokemon.height + currentPokemon.base_experience) / 3).toFixed(2)));
+  }
+  
+  function loadCards() {
+    return <Container addToCart={addPokemonToCart} searchTerm={searchTerm} />
+  }
+  function showModal() {
+    if (showModalState === true)
+      return (<Modal show={isClsEnabled} />);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ReactNotification />
+      <NavBar onCartClick={() => {
+        if (isCartEnabled === true)
+          setIsCardEnabled(false)
+        else
+          setIsCardEnabled(true)
+      }}
+        onSearchClick={(searchTerm) => { setSearchTerm(searchTerm) }} />
+
+      <div className='content'>
+        {loadCards()}
+        {renderCart(cartItems, priceTotal)}
+      </div>
+      {showModal(isClsEnabled)}
+    </>
   );
 }
 

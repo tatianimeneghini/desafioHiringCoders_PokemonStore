@@ -1,0 +1,21 @@
+.container{
+    display:grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .btn-group {
+    margin-left: 30%;
+    padding-top: 10px;
+  }
+  
+  .button-prev {
+    margin-right: 6px;
+    background-color: #4751e6;
+  
+  }
+  
+  .button-next{
+    margin-left: 6px;
+    background-color: #4751e6;
+  }

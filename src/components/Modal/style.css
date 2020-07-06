@@ -1,0 +1,16 @@
+.modal{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1000ms;
+  }
+  
+  .poke_thanks{
+    margin-right: 15%;
+    color: #4751e6;
+  }
