@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ReactNotification from 'react-notifications-component';
 import NavBar from './components/Navbar';
-import Card from './components/Card';
 import Cart from './components/Cart';
 import Container from './components/Container';
 import Modal from './components/Modal';

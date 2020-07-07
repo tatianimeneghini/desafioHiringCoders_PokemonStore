@@ -5,7 +5,7 @@ import capitalizeLetter from './../../util/capitalize'
 import './style.css';
 import {
   Card, Container, Row, Col, CardBody,
-  CardTitle, CardSubtitle, Button, Nav, ButtonGroup
+  CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 
 const unknownSprite = 'https://images.vexels.com/media/users/3/155301/isolated/preview/6a91c0d6c8ba37a9fd115e1776300319-pergunta-do-doodle-do-ponto-de-interroga----o-3d-by-vexels.png';
