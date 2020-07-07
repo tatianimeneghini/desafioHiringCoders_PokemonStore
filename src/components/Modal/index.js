@@ -13,8 +13,8 @@ export default function Modal(isClear){
   }else {
     return(
       <div className='modal'>
-        <img src={poke_thanks} />
-        <h1 className='poke_thanks' alt='Pikachu com mensagem de agradecimento'>Agradecemos pela compra!</h1>
+        <img src={poke_thanks} alt='Pikachu com mensagem de agradecimento'/>
+        <h1 className='poke_thanks'>Agradecemos pela compra!</h1>
       </div>  
     );
   }
