@@ -1,3 +1,9 @@
+# Pokémon Store
+Desafio da semana 17 para criar uma loja virtual que consome a [API Pokémon](https://pokeapi.co/), utilizando React.
+
+## Hospedagem
+A hospedagem foi feita no Netifly, neste [link](https://github.com/tatianimeneghini/desafioHiringCoders_PokemonStore).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
