@@ -1,8 +1,8 @@
 # Pokémon Store :baby_chick:
 Desafio da semana 17 para criar uma loja virtual que consome a [API Pokémon](https://pokeapi.co/), utilizando React.
 
-### Deploy da Aplicação com Netlify: :dash:
-> [Pokémon Store](https://pokestore-hiringcoders.netlify.app/)
+## Deploy da Aplicação com Netlify
+[Pokémon Store](https://pokestore-hiringcoders.netlify.app/)
 
 > Status do Projeto: Concluido :heavy_check_mark:
 
